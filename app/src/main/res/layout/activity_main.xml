@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/darker_gray"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+       <include layout="@layout/base_tool_bar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_weight="9"
+            android:layout_height="0dp"/>
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="When accessed from Home icon on various screens,
+default option to Footprint from previous screen (e.g.
+from screen where Home icon was selected. Then list:
+Create new Footprint"
+            />
+
+
+        <io.com.footprint.library.view.BadgeHolderLayout
+            android:id="@+id/view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            app:bhl_text_color="@android:color/white"
+            app:bhl_text_size="12sp"
+            app:bhl_badge_radius="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher"/>
+        </io.com.footprint.library.view.BadgeHolderLayout>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

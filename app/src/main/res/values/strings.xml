@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FootPrint</string>
+
+    <string-array name="Home_Items">
+        <item>TAKE FOOT PRINT</item>
+        <item>VIEW FOOT PRINT</item>
+        <item>AMEND DETAILS</item>
+    </string-array>
+</resources>
