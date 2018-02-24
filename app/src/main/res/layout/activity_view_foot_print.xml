@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <include layout="@layout/base_tool_bar" />
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Finish"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/rangeSeekbar1"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="16dp"
+                    app:bar_color="@android:color/darker_gray"
+                    app:bar_highlight_color="@android:color/holo_blue_dark"
+                    app:left_thumb_color="@android:color/white"
+                    app:left_thumb_color_pressed="@android:color/holo_blue_dark"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Finish"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Fast"/>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                    android:id="@+id/rangeSeekbar2"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="16dp"
+                    app:bar_color="@android:color/darker_gray"
+                    app:bar_highlight_color="@android:color/holo_blue_dark"
+                    app:left_thumb_color="@android:color/white"
+                    app:left_thumb_color_pressed="@android:color/holo_blue_dark"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Fast"/>
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/yellow"
+                android:background="@drawable/rounded_corder_bg"
+                android:drawableEnd="@drawable/ic_action_right_yellow"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:text="Save As Video"/>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/fab_home"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_home_white_32"
+        app:backgroundTint="@color/yellow"
+        app:borderWidth="0dp"
+        android:layout_margin="8dp"
+        app:elevation="8dp"
+        app:fabSize="normal"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>
